@@ -1,0 +1,30 @@
+body{
+    background-color:#bdb2ff;
+  
+}
+.box2{
+    color: #5e60ce;
+    text-align: center;
+}
+
+.box1 {
+    background-color: #dee2ff;    
+    padding: 50px ;
+    height: 500px;
+    margin: 50px ;
+    border-left: dashed;
+    border-right: dashed;
+    border-width: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.td1{
+    text-align: right;
+    padding: 20px;
+}
+
+.td2{
+    text-align: left;
+}
+
