@@ -1,0 +1,436 @@
+@font-face {
+    font-family: "open";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+  }
+  
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  a {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+   
+  .cerc {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    color: #333;
+    font: 13px open, tahoma;
+  }
+  .cerc:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    transform: scale( 1.02, 1.08 );
+    position: absolute;
+    background: #f00;
+    background: linear-gradient( 90deg, #fafafa, #fafafa, #1D8EF7, #fafafa, #fafafa );
+    background-position: 55px 0;
+    top: 0;
+    animation: linear 1s infinite linear;
+    left: 0;
+    z-index: -1;
+  }
+  @keyframes linear {
+    
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 200px 0;
+    }
+    
+  }
+  
+  @keyframes donence {
+    
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 60px;
+    }
+    
+  }
+  
+  @keyframes yuklen {
+    
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 85px;
+    }
+    
+  }
+  
+  @keyframes yilan {
+    
+    0%, 100% {
+      background-position: 20px -30px;
+    }
+    25% {
+      background-position: 150px 5px;
+    }
+    50% {
+      background-position: 20px 40px;
+    }
+    75% {
+      background-position: -100px 5px;
+    }
+    
+  }
+  .cerc.yuklen:before {
+    background: repeating-linear-gradient( -45deg, #fafafa, #fafafa 30px,#003964 30px, #003964 60px ) fixed;
+    animation: yuklen 1s infinite linear;
+  }
+  .cerc.donence:before {
+    background: radial-gradient( #fafafa, #fafafa,#003964, #fafafa, #fafafa );
+    animation: donence 1s infinite linear;
+  }
+  .cerc.yilan:before {
+    background: radial-gradient( #EA238D, #EA238D, #EA238D, #EA238D, #fafafa, #fafafa ) no-repeat;
+    background-size: 150px 50px;
+    animation: yilan 2s infinite linear;
+  }
+
+  
+
+  body {
+    font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 20px 50px 150px;
+    font-size: 13px;
+    text-align: center;
+    background: #ECF0F1;
+    background-image: url("Didim/ark.jpg")
+  }
+  
+  ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+  }
+  ul li {
+    font: bold 12px/18px sans-serif;
+    border-left:1px solid #FFF;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    background: #003964;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #fff;
+  }
+  ul li:hover {
+    background: #42adff;
+    color: #003964;
+  }
+  ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+   
+    -transition: opacity 0.2s;
+  }
+  ul li ul li { 
+    background: #003964; 
+    display: block; 
+    color: #fff;
+  }
+  ul li ul li:hover { background: #42adff; }
+  ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  #slider {
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+	position:relative;
+	margin:0 auto;/*make the image slider center-aligned */
+    box-shadow: 0px 1px 5px #999999;
+    
+}
+#slider img {
+	position:absolute;
+    margin: auto;
+	border:none;
+	display:none;
+    
+}
+
+/* the link style (if an image is wrapped in a link) */
+#slider a.imgLink {
+	z-index:2;
+	display:none;position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+    width: 100%;
+}
+
+.p11 { text-align: center; margin: 50px 10px 10px 10px;}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #e5e5e5;
+}
+
+.gallery {
+  width: 1542px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 500px;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+.h11 {
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+
+
+
+.baslikArkaPlan{
+  filter: brightness(130%);
+  position: relative;
+  height: 250px;
+  margin: 0 180px 0 0;
+}
+
+.AnaBaslik{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: calc(900px+2em);
+  top: 150px;
+  left: 120px;
+  padding: 30px;
+  background-color: rgba(122, 130, 128, 0.5);
+  border-radius: 50px;
+}
+
+.AnaBaslik h1{
+  font-size: 80px;
+  margin-bottom: -40px;
+  margin-top:-30px;
+  font-family: 'Lemonada', cursive;
+   color: #00634b;
+}
+
+.AnaBaslik p{
+  font-size: 20px;
+  color: #152622;
+  font-weight: bold;
+}
+
+/* Baslik */
+
+/* Icerik */
+
+h2{
+    color: brown;
+}
+
+.icerikKutusu{
+  display: flow-root;
+  height: 500px;
+  margin: 30px;
+}
+
+.photo{
+  float:left;
+  margin: 50px;
+  margin-right: 150px;
+}
+
+.photo2{
+  float:right;
+  margin: 50px;
+  margin-left: 150px;
+}
+
+#fotograf{
+  border-radius:30px;
+}
+
+.icerikKutusu .yazi{
+  margin: 100px;
+  font-size: calc(22px + .2vw);
+}
+
+hr.solid {
+ border: 0;
+ height: 1.5px;
+ background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+ width: 90%;
+}
+
+/* Icerik */
+
+.altBilgi{
+  overflow: hidden;
+  background-color: #27453e;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+
+#nav {
+    background-color: #f5594a;
+    width: 900px;
+    height: 60px;
+    border-radius: 10px;
+}
+#nav_wrapper {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+}
+#nav ul li {
+    display: inline-block;
+}
+#nav ul li a, visited {
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-top: 0;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-bottom-color: #003964;
+    border-bottom-style: solid;
+    border-bottom-width: 2px
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul li li a {
+    color: #003964;
+}
+ 
+
+    .mainmenubtn {
+      background-color: #003964;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding:20px;
+      margin-top:20px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-child {
+      display: none;
+      background-color: #003964;
+      min-width: 200px;
+    }
+    .dropdown-child a {
+      color: white;
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown:hover .dropdown-child {
+      display: block;
+    }
+ 
+
